@@ -19,6 +19,10 @@ const TodoList = () => {
 
     }, [todoArr, filter]);
 
+     if(todoArr.length===0){
+        return <h2>Plese Add Task.</h2>
+    }
+
     return (
         <div className='todo-container'>
             {filteredArr.length > 0 && filteredArr.map(todo => {
