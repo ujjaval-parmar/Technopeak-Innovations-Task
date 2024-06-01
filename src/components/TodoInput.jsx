@@ -42,7 +42,7 @@ const TodoInput = () => {
 
         const id = updateTask?.id || String(Math.floor(Math.random() * (1000 - 1 + 1) + 1))
 
-        const task = { todo: todoInputValue, status: todoStatusValue, id };
+        const task = { todo: todoInputValue, status: todoStatusValue || 'incomplete', id };
 
         if (updateTask) {
             dispatch(updateTodo(task));
